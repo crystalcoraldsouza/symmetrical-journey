@@ -5,7 +5,7 @@ import { config } from "./config/env";
 const app = express();
 
 app.use(express.json());
-app.use("/api", apiRoutes);
+app.use("/alpha-vantage", apiRoutes);
 
 app.listen(config.port, () => {
   console.log(`Server running on port ${config.port}`);

@@ -1,8 +1,12 @@
 import { Router } from "express";
-import { getData } from "../controllers/api.controller";
+import {
+  sanityCheck,
+  getSymbolSearchData,
+} from "../controllers/api.controller";
 
 const router = Router();
+router.get("/", sanityCheck);
 
-router.get("/data", getData);
+router.get("/symbol-search", getSymbolSearchData);
 
 export default router;
